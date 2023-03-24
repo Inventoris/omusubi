@@ -1,0 +1,41 @@
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+
+.header__logo {
+  display: block;
+  width: 250px;
+  animation: onigiri-jump 3.5s infinite ease-in-out;
+}
+
+.main {
+  margin: 30px 80px;
+}
+
+@keyframes onigiri-jump {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(25px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__inner {
+    padding: 50px 20px;
+  }
+
+  .header__logo {
+    width: 170px;
+    margin-left: 30px;
+  }
+
+  .main {
+    margin: 0 20px;
+  }
+}

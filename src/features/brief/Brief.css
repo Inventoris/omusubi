@@ -1,0 +1,70 @@
+.brief__list-item {
+  margin: 12px 0;
+}
+
+.brief__question-button {
+  font-size: 18px;
+  background-color: var(--light-grey);
+  transition: background .125s ease;
+}
+
+.brief__question-button:hover,
+.brief__question-button:focus {
+  outline: 1px solid var(--light-grey);
+  background-color: var(--dark-grey);
+}
+
+.brief__answer {
+  position: absolute;
+  border-radius: var(--basic-border-radius);
+  top: 50px;
+  left: 33%;
+  background-color: var(--light-grey);
+  transition: visibility .125s ease-in, opacity .125s ease-in;
+  z-index: 1;
+}
+
+.brief__answer_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.brief__answer_hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.brief__answer-content {
+  font-size: 22px;
+  line-height: 1.6;
+  padding: 50px 70px;
+  max-width: 400px;
+}
+
+.brief__close-button {
+  right: 30px;
+  top: 30px;
+}
+
+@media (max-width: 1024px) {
+  .brief__question-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .brief__answer {
+    top: 30px;
+    left: 0;
+    margin: 0 16px;
+  }
+
+  .brief__answer-content {
+    font-size: 20px;
+    padding: 70px 45px 50px;
+  }
+
+  .brief__close-button {
+    right: 15px;
+    top: 15px;
+  }
+}

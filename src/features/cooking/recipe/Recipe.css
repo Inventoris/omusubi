@@ -1,0 +1,132 @@
+.recipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 770px;
+  opacity: .3;
+  margin-top: 50px;
+  border-radius: var(--basic-border-radius);
+  background-color: var(--light-grey);
+  transition: opacity .25s ease-in;
+}
+
+.recipe_selected {
+  opacity: 1;
+}
+
+.recipe__content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  transition: opacity .25s ease-in-out;
+}
+
+.recipe__content-container_changing {
+  opacity: .5;
+}
+
+.recipe__name-container {
+  padding-top: 70px;
+}
+
+.recipe__name {
+  font-size: 30px;
+  margin: 0;
+}
+
+.recipe__step {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.recipe__image {
+  width: 100px;
+}
+
+.recipe__content {
+  text-align: justify;
+  font-size: 20px;
+  padding: 0 200px;
+  height: 240px;
+}
+
+.recipe__buttons-container {
+  display: flex;
+  gap: 100px;
+  padding-bottom: 80px;
+}
+
+.recipe__button {
+  font-size: 16px;
+  background-color: #FFFFFF;
+  transition: box-shadow .25s ease;
+}
+
+.recipe__button:disabled {
+  cursor: initial;
+}
+
+.recipe__button:not(:disabled) {
+  box-shadow: 0 0 3px 0px #000000;
+}
+
+.recipe__button:not(:disabled):hover {
+  box-shadow: 0 0 8px 0px #000000;
+}
+
+.recipe__button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.recipe__close-button {
+  top: 30px;
+  right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .recipe {
+    height: 650px;
+  }
+
+  .recipe__content-container {
+    gap: 25px;
+    overflow: scroll;
+  }
+
+  .recipe__name-container {
+    padding-top: 30px;
+  }
+
+  .recipe__name {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .recipe__step {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .recipe__content {
+    text-align: left;
+    padding: 0 50px;
+  }
+
+  .recipe__buttons-container {
+    gap: 50px;
+    padding: 35px 0;
+  }
+
+  .recipe__button {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .recipe__close-button {
+    top: 15px;
+    right: 15px;
+  }
+}

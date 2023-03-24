@@ -1,0 +1,76 @@
+:root {
+  --light-grey: #e0e0e0;
+  --dark-grey: #b3b3b3;
+  --nori-color: #008000;
+  --basic-border-radius: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  border-radius: var(--basic-border-radius);
+  user-select: none;
+  padding: 10px 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  display: flex;
+  position: absolute;
+  padding: 0;
+  background-color: transparent;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-grey);
+  border-radius: var(--basic-border-radius);
+  margin: 50px;
+  padding: 40px;
+}
+
+.error-message h2 {
+  font-size: 22px;
+  margin: 0 0 25px;
+}
+
+.error-message code {
+  color: #a52a2a;
+  width: 70%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .error-message code {
+    width: 100%;
+  }
+}
