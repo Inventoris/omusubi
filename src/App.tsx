@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer'
 import { ErrorBoundary } from 'react-error-boundary'
 import './App.css'
 
-export function playShiftAnimation (element: HTMLDivElement | null, className: string):void {
+export function playShiftAnimation (element: HTMLDivElement | null, className: string) : void {
   element?.classList.add(className)
   setTimeout(() => element?.classList.remove(className), 130)
 }

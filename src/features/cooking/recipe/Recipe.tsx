@@ -7,6 +7,14 @@ import { useAppSelector, useAppDispatch } from '../../../app/hooks'
 import { RootState } from '../../../app/store'
 import './Recipe.css'
 
+function scrollContentToTop(element: HTMLDivElement | null) : void {
+  element?.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+}
+
 const Recipe = forwardRef<HTMLDivElement>((_, ref) => {
   const choice = useAppSelector((state: RootState) => state.menu.recipe)
   const step = useAppSelector((state: RootState) => state.recipes.step)
@@ -38,10 +46,12 @@ const Recipe = forwardRef<HTMLDivElement>((_, ref) => {
             <button className="recipe__button" onClick={() => {
               dispatch(back())
               playShiftAnimation(refToContent.current, 'recipe__content-container_changing')
+              scrollContentToTop(refToContent.current)
             }} disabled={step === 0 ? true : false}>Назад</button>
             <button className="recipe__button" onClick={() => {
               dispatch(next())
               playShiftAnimation(refToContent.current, 'recipe__content-container_changing')
+              scrollContentToTop(refToContent.current)
             }} disabled={step === 3 ? true : false}>Дальше</button>
           </div>
           <button className="recipe__close-button close-button" onClick={() => dispatch(resetRecipe())}>

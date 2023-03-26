@@ -62,10 +62,11 @@
 .recipe__button {
   font-size: 16px;
   background-color: #FFFFFF;
-  transition: box-shadow .25s ease;
+  transition: color .25s ease, box-shadow .25s ease;
 }
 
 .recipe__button:disabled {
+  color: var(--dark-grey);
   cursor: initial;
 }
 
@@ -88,7 +89,8 @@
 
 @media (max-width: 1024px) {
   .recipe {
-    height: 650px;
+    height: 630px;
+    justify-content: start;
   }
 
   .recipe__content-container {
@@ -101,12 +103,12 @@
   }
 
   .recipe__name {
-    font-size: 25px;
+    font-size: 22px;
     margin: 0;
   }
 
   .recipe__step {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
   }
 
